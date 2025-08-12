@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder - SonicBot</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://cdn.statically.io/img/fancyodds.com/wp-content/uploads/2022/01/Anime-Girl-Pfp-Cute-Hot-Red-Dress-Anime-Girl-PFP.png" type="image/x-icon" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Profile-specific styles */
+    .profile-container {
+      max-width: 900px;
+      margin: 50px auto 80px;
+      background: rgba(30, 41, 59, 0.85);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      color: #e2e8f0;
+    }
+
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .avatar-wrapper {
+      flex: 0 0 150px;
+      position: relative;
+    }
+
+    .profile-header img.avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      display: block;
+    }
+
+    .profile-header img.banner {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 15px;
+      margin-top: 15px;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(56, 189, 248, 0.5);
+    }
+
+    .profile-info {
+      flex: 1 1 auto;
+      min-width: 250px;
+    }
+
+    .profile-info h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    .role {
+      font-size: 1.3rem;
+      color: #94a3b8;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    .bio {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-top: 20px;
+    }
+
+    .section {
+      margin-top: 35px;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      color: #38bdf8;
+      border-left: 5px solid #38bdf8;
+      padding-left: 12px;
+      margin-bottom: 15px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid #38bdf8;
+      border-radius: 10px;
+      padding: 9px 14px;
+      font-size: 1rem;
+      color: #38bdf8;
+    }
+
+    .fun-facts {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .fun-facts li {
+      background: rgba(255, 255, 255, 0.05);
+      margin-bottom: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <!-- #HEADER -->
+
+  <header>
+    <div class="container">
+      <a href="home.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
+  <img 
+    src="https://cdn.discordapp.com/avatars/1403216365669584926/a89f12cd9c02bd3b00a335ef575b0b54.webp?size=1024%22" 
+    alt="Sonic Bot Avatar" 
+    style="width: 48px; height: 48px; border-radius: 50%;"
+  >
+  <span style="font-weight: bold; font-size: 1.2rem; color: #fff;">Sonic</span></a>
+      <div class="header-right">
+        <div class="header-nav-wrapper">
+          <button class="navbar-toggle-btn" data-navbar-toggle-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+          <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+              <li>
+                <a href="home.html" class="navbar-link">Home</a>
+              </li>
+              <li>
+                <a href="home.html#about" class="navbar-link">About</a>
+              </li>
+              <li>
+                <a href="home.html#team" class="navbar-link">Team</a>
+              </li>
+              <li>
+                <a href="commands.html" class="navbar-link">Commands</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/X49uQx7dMD" class="navbar-link">Join My Server</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-actions">
+          
+<a href="https://discord.com/oauth2/authorize?client_id=1403216365669584926&scope=bot&permissions=8">
+          <button class="btn btn-primary">Invite</button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- MAIN PROFILE CONTENT -->
+<main>
+  <article class="profile-container">
+
+    <div class="profile-header" 
+         style="position: relative; max-width: 900px; margin: 0 auto 30px; width: 100%; max-width: 900px;">
+
+      <!-- Banner image centered -->
+      <img
+        src="https://cdn.discordapp.com/banners/708064281417220109/2bbe42f49424b25fd4c22216b41d012b.png?size=1024"
+        alt="Founder Banner"
+        class="banner"
+        style="display: block; margin: 0 auto; width: 100%; max-width: 900px; height: 250px; object-fit: cover; border-radius: 15px;"/>
+
+      <!-- Profile avatar positioned bottom-left over banner -->
+      <img
+        src="https://cdn.discordapp.com/avatars/708064281417220109/762f070fa3f894bb705759eb9ac98429.png?size=512"
+        alt="Founder Avatar"
+        class="avatar"
+        style="
+          position: absolute;
+          bottom: -40px;
+          left: calc(50% - 450px + 25px); /* center container (900/2=450) minus half container + offset */
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+          border-radius: 50%; /* for circular */
+          box-shadow: 0 0 8px 2px hsl(210, 90%, 55%);
+          border: 4px solid transparent;
+          object-fit: cover;
+          background: #222;"/>
+    </div>
+
+    <div class="profile-info" style="margin-top: -30px; max-width: 900px; margin-left: 100px;">
+  <h1>Harlequin</h1>
+  <div class="role">Founder & Lead Developer</div>
+  <p class="bio">
+    Harlequin is the visionary behind SonicBot — a fast, feature-packed Discord bot designed to bring your community to life.
+    With a deep passion for development and the Sonic franchise, Harlequin blends technical skill with creativity to deliver a
+    bot that is constantly evolving through community feedback.
+  </p>
+
+  <!-- Social Buttons -->
+  <div class="social-buttons" style="margin-top: 20px; display: flex; gap: 15px;">
+    <a href="https://discord.com/users/708064281417220109" target="_blank" rel="noopener" class="social-link" style="font-size: 1.8rem; color: #38bdf8;">
+      <ion-icon name="logo-discord"></ion-icon>
+    </a>  
+</div>
+
+
+      <section class="section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div class="skill">JavaScript (Discord.js)</div>
+          <div class="skill">HTML &amp; CSS</div>
+          <div class="skill">Bot Architecture</div>
+          <div class="skill">Event Planning</div>
+          <div class="skill">Community Management</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Fun Facts</h2>
+        <ul class="fun-facts">
+          <li>Favorite Sonic character: Tails 🦊</li>
+          <li>Started coding at age 14</li>
+          <li>Owns over 50 Sonic collectibles</li>
+          <li>Drinks way too much coffee ☕</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+    <!-- #FOOTER -->
+  <footer>
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="home.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
+  <img 
+    src="https://cdn.discordapp.com/avatars/1403216365669584926/a89f12cd9c02bd3b00a335ef575b0b54.webp?size=1024%22" 
+    alt="Sonic Bot Avatar" 
+    style="width: 48px; height: 48px; border-radius: 50%;"
+  >
+  <span style="font-weight: bold; font-size: 1.2rem; color: #fff;">Sonic</span></a>
+          <p class="footer-brand-text">
+            Powered by passion and innovation, Sonic is continuously evolving to bring the best experience to your Discord server. Join us on this journey and be part of something special.
+          </p>
+          <h3 class="h4 social-title">Join the community</h3>
+          <ul class="social-list">
+            <li>
+              <a href="https://github.com/" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/sonic_hedgehog" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sonicthehedgehog?igsh=NTc4MTIwNjQ2YQ==" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@SonictheHedgehog" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li>
+              <h3 class="h3 footer-item-title">Quick Links</h3>
+            </li>
+            <li class="footer-item">
+              <a href="home.html#about" class="footer-link">Features</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://discord.com/oauth2/authorize?client_id=1403216365669584926&scope=bot&permissions=8" class="footer-link">Invite Sonic</a>
+            </li>
+            <li class="footer-item">
+              <a href="support.html" class="footer-link">Support</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://top.gg/" class="footer-link">Top.gg</a>
+            </li>
+          </ul>
+          <ul class="footer-list">
+            <li>
+              <h3 class="h3 footer-item-title">Resources</h3>
+            </li>
+            <li class="footer-item">
+              <a href="https://discord.com/developers/docs/intro" class="footer-link">Discord API Docs</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://discord.gg/X49uQx7dMD" class="footer-link">Community Server</a>
+            </li>
+            <li class="footer-item">
+              <a href="changelog.html" class="footer-link">Changelog</a>
+            </li>
+            <li class="footer-item">
+              <a href="faq.html" class="footer-link">FAQ</a>
+            </li>
+          </ul>
+          <ul class="footer-list">
+            <li>
+              <h3 class="h3 footer-item-title">Legal</h3>
+            </li>
+            <li class="footer-item">
+              <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="footer-item">
+              <a href="terms.html" class="footer-link">Terms of Service</a>
+            </li>
+            <li class="footer-item">
+              <a href="contact.html" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 <a href="https://discord.com/users/708064281417220109">@king.harlequin.</a> all rights reserved
+        </p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<style>
+  .top-seller-card img {
+    border-radius:50%;
+  }
+</style>
+
+  <!-- #GO TO TOP -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <!-- custom js link -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commands - Sonic</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://cdn.statically.io/img/fancyodds.com/wp-content/uploads/2022/01/Anime-Girl-Pfp-Cute-Hot-Red-Dress-Anime-Girl-PFP.png" type="image/x-icon" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .commands-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      color: #ddd;
+    }
+
+    .commands-section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+
+    .command-category {
+      margin-bottom: 40px;
+    }
+
+    .category-title {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #80d8ff;
+      margin-bottom: 20px;
+      border-left: 4px solid #80d8ff;
+      padding-left: 12px;
+    }
+
+    .commands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .command-card {
+      background: #2f4f8a;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: default;
+    }
+
+    .command-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .command-name {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #aad4ff;
+      margin-bottom: 8px;
+    }
+
+    .command-description {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #ddd;
+      margin-bottom: 12px;
+    }
+
+    .command-usage {
+      font-family: 'Roboto Mono', monospace;
+      background: #1e3555;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #80d8ff;
+      user-select: all;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a href="home.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img
+          src="https://cdn.discordapp.com/avatars/1403216365669584926/a89f12cd9c02bd3b00a335ef575b0b54.webp?size=1024"
+          alt="Sonic Bot Avatar"
+          style="width: 48px; height: 48px; border-radius: 50%" />
+        <span style="font-weight: bold; font-size: 1.2rem; color: #fff;">Sonic</span>
+      </a>
+
+      <div class="header-right">
+        <div class="header-nav-wrapper">
+          <button class="navbar-toggle-btn" data-navbar-toggle-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+          <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+              <li><a href="home.html" class="navbar-link">Home</a></li>
+              <li><a href="home.html#about" class="navbar-link">About</a></li>
+              <li><a href="home.html#team" class="navbar-link">Team</a></li>
+              <li><a href="commands.html" class="navbar-link active">Commands</a></li>
+              <li><a href="https://discord.gg/X49uQx7dMD" class="navbar-link">Join My Server</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-actions">
+          <a href="https://discord.com/oauth2/authorize?client_id=1403216365669584926&scope=bot&permissions=8">
+            <button class="btn btn-primary">Invite</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <article>
+      <section class="commands-section">
+        <h2>Explore Sonic's Commands</h2>
+
+        <!-- Moderation Commands -->
+        <div class="command-category">
+          <h3 class="category-title">Moderation</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-name">/kick</div>
+              <div class="command-description">Remove a member from the server temporarily.</div>
+              <div class="command-usage">Usage: <code>/kick @user [reason]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/ban</div>
+              <div class="command-description">Ban a user from the server permanently.</div>
+              <div class="command-usage">Usage: <code>/ban @user [reason]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/timeout</div>
+              <div class="command-description">Temporarily mute a member.</div>
+              <div class="command-usage">Usage: <code>/timeout @user [duration]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/purge</div>
+              <div class="command-description">Delete multiple messages at once.</div>
+              <div class="command-usage">Usage: <code>/purge [number]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/modlog</div>
+              <div class="command-description">View recent moderation actions.</div>
+              <div class="command-usage">Usage: <code>/modlog [user]</code></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confessions Commands -->
+        <div class="command-category">
+          <h3 class="category-title">Confessions System</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-name">/confess</div>
+              <div class="command-description">Send an anonymous confession with optional image.</div>
+              <div class="command-usage">Usage: <code>/confess [message]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/replyconfess</div>
+              <div class="command-description">Reply anonymously to a confession.</div>
+              <div class="command-usage">Usage: <code>/replyconfess [confession ID] [message]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/confessblacklist</div>
+              <div class="command-description">Blacklist a user from confessing or replying.</div>
+              <div class="command-usage">Usage: <code>/confessblacklist @user</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/confesslog</div>
+              <div class="command-description">View confession logs for moderators.</div>
+              <div class="command-usage">Usage: <code>/confesslog</code></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Commands -->
+        <div class="command-category">
+          <h3 class="category-title">User & Server Info</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-name">/userinfo</div>
+              <div class="command-description">Get detailed info about a user.</div>
+              <div class="command-usage">Usage: <code>/userinfo @user</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/serverstats</div>
+              <div class="command-description">View real-time server statistics.</div>
+              <div class="command-usage">Usage: <code>/serverstats</code></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Miscellaneous Commands -->
+        <div class="command-category">
+          <h3 class="category-title">Miscellaneous</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-name">/ping</div>
+              <div class="command-description">Check the bot's latency and uptime.</div>
+              <div class="command-usage">Usage: <code>/ping</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/help</div>
+              <div class="command-description">Show the help menu with all commands.</div>
+              <div class="command-usage">Usage: <code>/help [command]</code></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="home.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <img
+              src="https://cdn.discordapp.com/avatars/1403216365669584926/a89f12cd9c02bd3b00a335ef575b0b54.webp?size=1024"
+              alt="Sonic Bot Avatar"
+              style="width: 48px; height: 48px; border-radius: 50%" />
+            <span style="font-weight: bold; font-size: 1.2rem; color: #fff;">Sonic</span>
+          </a>
+
+          <p class="footer-brand-text">
+            Powered by passion and innovation, Sonic is continuously evolving to bring the best experience to your Discord server. Join us on
+            this journey and be part of something special.
+          </p>
+
+          <h3 class="h4 social-title">Join the community</h3>
+
+          <ul class="social-list">
+            <li><a href="https://github.com/" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="https://twitter.com/sonic_hedgehog" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/sonicthehedgehog?igsh=NTc4MTIwNjQ2YQ==" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://www.youtube.com/@SonictheHedgehog" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li><h3 class="h3 footer-item-title">Quick Links</h3></li>
+            <li class="footer-item"><a href="home.html#about" class="footer-link">Features</a></li>
+            <li class="footer-item"><a href="https://discord.com/oauth2/authorize?client_id=1403216365669584926&scope=bot&permissions=8" class="footer-link">Invite Sonic</a></li>
+            <li class="footer-item"><a href="support.html" class="footer-link">Support</a></li>
+            <li class="footer-item"><a href="https://top.gg/" class="footer-link">Top.gg</a></li>
+          </ul>
+
+          <ul class="footer-list">
+            <li><h3 class="h3 footer-item-title">Resources</h3></li>
+            <li class="footer-item"><a href="https://discord.com/developers/docs/intro" class="footer-link">Discord API Docs</a></li>
+            <li class="footer-item"><a href="https://discord.gg/X49uQx7dMD" class="footer-link">Community Server</a></li>
+            <li class="footer-item"><a href="changelog.html" class="footer-link">Changelog</a></li>
+            <li class="footer-item"><a href="faq.html" class="footer-link">FAQ</a></li>
+          </ul>
+
+          <ul class="footer-list">
+            <li><h3 class="h3 footer-item-title">Legal</h3></li>
+            <li class="footer-item"><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li class="footer-item"><a href="terms.html" class="footer-link">Terms of Service</a></li>
+            <li class="footer-item"><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2025 <a href="https://discord.com/users/708064281417220109">@king.harlequin.</a> all rights reserved</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- go to top -->
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <!-- custom js -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
