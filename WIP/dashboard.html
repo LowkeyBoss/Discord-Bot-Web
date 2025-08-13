@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Your Server - Sonic Bot</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../assets/images/sonic.png" type="image/x-icon" />
+
+  <!-- Ionicons for menu icon -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Navbar styles */
+    header {
+      background: linear-gradient(to right, #3b82f6, #6366f1, #8b5cf6);
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo span {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: white;
+      user-select: none;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .navbar-list {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-link {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .navbar-link:hover {
+      color: #c4b5fd; /* light purple */
+    }
+    .btn-primary {
+      background-color: #7c3aed;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #6d28d9;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    /* Navbar toggle button for mobile (optional, no functionality yet) */
+    .navbar-toggle-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1.8rem;
+    }
+
+    /* Responsive: show toggle button on small screens */
+    @media (max-width: 768px) {
+      .navbar-list {
+        display: none;
+      }
+      .navbar-toggle-btn {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-700 min-h-screen flex flex-col font-sans">
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a href="home" class="logo" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://cdn.discordapp.com/avatars/1403216365669584926/a89f12cd9c02bd3b00a335ef575b0b54.webp?size=1024"
+          alt="Sonic Bot Avatar"
+          style="width: 48px; height: 48px; border-radius: 50%;"
+        />
+        <span>Sonic</span>
+      </a>
+
+      <div class="header-right">
+        <nav>
+          <ul class="navbar-list">
+            <li><a href="home" class="navbar-link">Home</a></li>
+            <li><a href="home#about" class="navbar-link">About</a></li>
+            <li><a href="home#team" class="navbar-link">Team</a></li>
+            <li><a href="commands" class="navbar-link">Commands</a></li>
+            <li><a href="https://discord.gg/X49uQx7dMD" class="navbar-link">Join My Server</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://discord.com/oauth2/authorize?client_id=1403216365669584926&scope=bot&permissions=8" target="_blank" rel="noopener noreferrer">
+            <button class="btn-primary">Invite</button>
+          </a>
+          <button
+            id="logout-btn"
+            class="btn-primary bg-red-600 hover:bg-red-700 ml-2"
+            title="Logout"
+            type="button"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow flex flex-col items-center px-6 pt-12 pb-16 text-white">
+
+  <header class="max-w-3xl text-center mb-12">
+    <img
+      src="https://cdn.discordapp.com/avatars/1403216365669584926/a89f12cd9c02bd3b00a335ef575b0b54.webp?size=128"
+      alt="Sonic Bot Avatar"
+      class="mx-auto w-24 h-24 rounded-full mb-6 border-4 border-white shadow-lg"
+    />
+    <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Welcome to Sonic Bot Configuration</h1>
+    <p class="text-lg max-w-xl mx-auto opacity-90 leading-relaxed">
+      Select one of your Discord servers below where you want to configure and manage Sonic Bot’s features.<br />
+      Make sure you have the <strong>Manage Server</strong> permission on each server to get started.
+    </p>
+  </header>
+
+  <div class="w-full max-w-5xl">
+    <div class="mb-8 flex justify-center">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search your servers..."
+        class="w-full max-w-md rounded-full px-6 py-3 text-gray-800 font-semibold shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-400 transition"
+      />
+    </div>
+
+    <div id="server-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Server cards injected here -->
+    </div>
+  </div>
+
+</main>
+
+  <footer class="text-center text-white/70 select-none pb-6">
+    &copy; 2025 Sonic Bot. All rights reserved.
+  </footer>
+
+  <script>
+    // Logout button handler (replace with your actual logout logic)
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      alert('Logout button clicked! Implement your logout functionality here.');
+      // e.g., clear session, redirect to login, etc.
+      // window.location.href = '/login';
+    });
+
+    // Sample data: user's servers with permission to manage (replace with real fetched data)
+    const userServers = [
+      { id: '1234567890', name: 'Gaming Hub', icon: 'https://cdn.discordapp.com/icons/1234567890/abc123.png', members: 150 },
+      { id: '0987654321', name: "Coder's Den", icon: null, members: 78 },
+      { id: '1122334455', name: 'Community Server', icon: 'https://cdn.discordapp.com/icons/1122334455/def456.png', members: 340 },
+      { id: '5544332211', name: 'Music Lovers', icon: null, members: 240 },
+    ];
+
+    const serverListEl = document.getElementById('server-list');
+    const searchInput = document.getElementById('search-input');
+
+    function renderServers(filter = '') {
+      serverListEl.innerHTML = '';
+
+      const filteredServers = userServers.filter(s => s.name.toLowerCase().includes(filter.toLowerCase()));
+
+      if(filteredServers.length === 0) {
+        serverListEl.innerHTML = `<p class="col-span-full text-center text-white/80 text-xl py-20">No servers found.</p>`;
+        return;
+      }
+
+      filteredServers.forEach(server => {
+        const iconUrl = server.icon
+          ? server.icon
+          : 'https://via.placeholder.com/64/ffffff/000000?text=No+Icon';
+
+        const card = document.createElement('div');
+        card.className = 'bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-6 flex flex-col items-center space-y-4 shadow-lg hover:shadow-2xl transition cursor-pointer';
+
+        card.innerHTML = `
+          <img src="${iconUrl}" alt="${server.name} Icon" class="w-16 h-16 rounded-full border-2 border-white shadow" />
+          <h3 class="text-xl font-bold">${server.name}</h3>
+          <p class="text-white/80">${server.members.toLocaleString()} Members</p>
+          <button class="mt-auto bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-2 rounded-full transition shadow">
+            Configure
+          </button>
+        `;
+
+        card.querySelector('button').addEventListener('click', (e) => {
+          e.stopPropagation();
+          // Redirect to server config page, replace URL as needed
+          window.location.href = `/configure/${server.id}`;
+        });
+
+        card.addEventListener('click', () => {
+          // Optional: also configure on clicking anywhere on the card
+          window.location.href = `/configure/${server.id}`;
+        });
+
+        serverListEl.appendChild(card);
+      });
+    }
+
+    // Initial render
+    renderServers();
+
+    // Search handler
+    searchInput.addEventListener('input', e => {
+      renderServers(e.target.value);
+    });
+  </script>
+
+</body>
+</html>
