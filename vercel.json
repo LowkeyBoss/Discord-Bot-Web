@@ -1,6 +1,28 @@
 {
-  "rewrites": [
-    { "source": "/:page", "destination": "/:page.html" },
-    { "source": "/", "destination": "/home.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    // Rewrite root "/" to "/home.html"
+    {
+      "src": "^/$",
+      "dest": "/home.html"
+    },
+
+    // Rewrite "/somepage" to "/somepage.html"
+    {
+      "src": "^/([^/]+)$",
+      "dest": "/$1.html"
+    },
+
+    // All other routes handled by Node function
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
   ]
 }
