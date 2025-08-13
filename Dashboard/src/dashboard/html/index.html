@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bot Name - Discord Bot</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/L59DTpm/Pink-and-Black-Modern-Initials-Logo-Design-1-removebg-preview.png" type="image/x-icon">
+    <link href="../css/output.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://i.ibb.co/L59DTpm/Pink-and-Black-Modern-Initials-Logo-Design-1-removebg-preview.png" alt="Bot Logo" class="w-10 h-10 rounded-full">
+                <span class="text-xl font-semibold">Eventia</span>
+            </div>
+            <ul class="hidden md:flex space-x-6 text-lg">
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1297533249391693896&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1500%2Fapi%2Fauth%2Fdiscord%2Fredirect&scope=identify+guilds+guilds.join" class="text-blue-500 hover:text-blue-700 transition duration-300">Login</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-700 transition duration-300">Docs</a></li>
+                <li><a href="" class="text-gray-700 hover:text-blue-700 transition duration-300">Invite Bot</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-700 transition duration-300">Support</a></li>
+            </ul>
+            <button class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Elevate Your Discord Server</h1>
+                <p class="text-xl mb-6">Powerful moderation, engaging giveaways, and seamless ticket management - all in one bot!</p>
+                <a href="#" class="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-blue-100 transition duration-300">Add to Discord</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://i.imgur.com/glFA9h1.png" alt="Bot Banner" class="rounded-lg shadow-xl animate-float">
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Powerful Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i data-lucide="tickets"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ticket System</h3>
+                    <p class="text-gray-600">Streamline support with our integrated ticket management system.</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl text-green-500 mb-4">
+                        <i data-lucide="gift"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Giveaway System</h3>
+                    <p class="text-gray-600">Host exciting giveaways to boost engagement in your server.</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl text-red-500 mb-4">
+                        <i data-lucide="logs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Moderation Logs</h3>
+                    <p class="text-gray-600">Keep track of all moderation actions with detailed logs.</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl text-purple-500 mb-4">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Auto Moderation</h3>
+                    <p class="text-gray-600">Set up rules to automatically moderate your server.</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl text-yellow-500 mb-4">
+                        <i data-lucide="user-round-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Role Management</h3>
+                    <p class="text-gray-600">Easily manage and assign roles to your server members.</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl text-indigo-500 mb-4">
+                        <i data-lucide="chart-bar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Server Stats</h3>
+                    <p class="text-gray-600">Get insights into your server's activity and growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bot Statistics Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Bot Statistics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <p class="text-xl text-gray-600">Servers</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl font-bold text-green-600 mb-2">100,000+</div>
+                    <p class="text-xl text-gray-600">Users</p>
+                </div>
+                <div class="glass-effect p-6 text-center">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">1,000,000+</div>
+                    <p class="text-xl text-gray-600">Commands Executed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/60?img=1" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">John Doe</h4>
+                            <p class="text-gray-600">Server Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"This bot has completely transformed how we manage our server. The ticket system is a game-changer!"</p>
+                </div>
+                <div class="glass-effect p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/60?img=2" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Jane Smith</h4>
+                            <p class="text-gray-600">Moderator</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The moderation tools are incredibly powerful. It's made our job so much easier and more efficient."</p>
+                </div>
+                <div class="glass-effect p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/60?img=3" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Mike Johnson</h4>
+                            <p class="text-gray-600">Community Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The giveaway system has boosted engagement in our server. Our members love it!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Elevate Your Discord Server?</h2>
+            <p class="text-xl mb-8">Join thousands of servers already using Your Bot Name to enhance their communities.</p>
+            <a href="#" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">Add to Discord</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Your Bot Name</h3>
+                    <p class="text-gray-400">Elevating Discord communities with powerful tools and engaging features.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i data-lucide="message-circle"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                &copy; 2024 Your Bot Name. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

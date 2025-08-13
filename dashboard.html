@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="../css/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.ibb.co/L59DTpm/Pink-and-Black-Modern-Initials-Logo-Design-1-removebg-preview.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://i.ibb.co/L59DTpm/Pink-and-Black-Modern-Initials-Logo-Design-1-removebg-preview.png" alt="Bot Logo" class="w-10 h-10 rounded-full">
+                <span class="text-xl font-semibold">Eventia</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Invite Bot
+                </button>
+                <div class="relative group">
+                    <div class="flex items-center space-x-2 cursor-pointer">
+                        <p id="navbar-username" class="text-gray-700">Loading...</p>
+                        <img src="" alt="User Avatar" id="navbar-avatar" class="w-8 h-8 rounded-full">
+                    </div>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 invisible group-hover:visible transition duration-300">
+                        <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left" id="logout-button">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 pt-24">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4 animate-fade-in">Welcome to Your Dashboard</h1>
+            <p class="text-xl text-gray-600 animate-fade-in">Manage your Discord servers and bot settings</p>
+        </header>
+
+        <main>
+            <div id="server-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </main>
+
+        <footer class="text-center mt-12 py-4 text-gray-500 text-sm">
+            &copy; 2024 Eventia. All rights reserved.
+        </footer>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
