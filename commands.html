@@ -152,9 +152,29 @@
               <div class="command-usage">Usage: <code>/ban @user [reason]</code></div>
             </div>
             <div class="command-card">
+              <div class="command-name">/soft-ban</div>
+              <div class="command-description">Softban a member (ban + immediate unban, deletes recent messages).</div>
+              <div class="command-usage">Usage: <code>/soft-ban @user [reason]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/unban</div>
+              <div class="command-description">Unban a user from the server.</div>
+              <div class="command-usage">Usage: <code>/unban @user [reason]</code></div>
+            </div>
+            <div class="command-card">
               <div class="command-name">/timeout</div>
-              <div class="command-description">Temporarily mute a member.</div>
+              <div class="command-description">Timeout (mute) a member for a specified duration.</div>
               <div class="command-usage">Usage: <code>/timeout @user [duration]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/timeout-remove</div>
+              <div class="command-description">Remove a timeout (mute) from a specified member.</div>
+              <div class="command-usage">Usage: <code>/timeout-remove @user</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/timeout-list</div>
+              <div class="command-description">List all members currently timed out.</div>
+              <div class="command-usage">Usage: <code>/timeout-list</code></div>
             </div>
             <div class="command-card">
               <div class="command-name">/purge</div>
@@ -162,9 +182,14 @@
               <div class="command-usage">Usage: <code>/purge [number]</code></div>
             </div>
             <div class="command-card">
-              <div class="command-name">/modlog</div>
-              <div class="command-description">View recent moderation actions.</div>
-              <div class="command-usage">Usage: <code>/modlog [user]</code></div>
+              <div class="command-name">/mod-commands</div>
+              <div class="command-description">Display all available moderation commands.</div>
+              <div class="command-usage">Usage: <code>/mod-commands</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/mod-config</div>
+              <div class="command-description">Configure moderation system settings for the server.</div>
+              <div class="command-usage">Usage: <code>/mod-config</code></div>
             </div>
           </div>
         </div>
@@ -176,22 +201,47 @@
             <div class="command-card">
               <div class="command-name">/confess</div>
               <div class="command-description">Send an anonymous confession with optional image.</div>
-              <div class="command-usage">Usage: <code>/confess [message]</code></div>
+              <div class="command-usage">Usage: <code>/confess [message] [attachment]</code></div>
             </div>
             <div class="command-card">
-              <div class="command-name">/replyconfess</div>
+              <div class="command-name">/confess-reply</div>
               <div class="command-description">Reply anonymously to a confession.</div>
-              <div class="command-usage">Usage: <code>/replyconfess [confession ID] [message]</code></div>
+              <div class="command-usage">Usage: <code>/confess-reply [confession ID] [message] [attachment]</code></div>
             </div>
             <div class="command-card">
-              <div class="command-name">/confessblacklist</div>
+              <div class="command-name">/confess-blacklist</div>
               <div class="command-description">Blacklist a user from confessing or replying.</div>
-              <div class="command-usage">Usage: <code>/confessblacklist @user</code></div>
+              <div class="command-usage">Usage: <code>/confess-blacklist @user [reason]</code></div>
+            </div>
+                        <div class="command-card">
+              <div class="command-name">/confess-unblacklist</div>
+              <div class="command-description">Unblacklist a user from confessing or replying.</div>
+              <div class="command-usage">Usage: <code>/confess-unblacklist @user [reason]</code></div>
             </div>
             <div class="command-card">
-              <div class="command-name">/confesslog</div>
-              <div class="command-description">View confession logs for moderators.</div>
-              <div class="command-usage">Usage: <code>/confesslog</code></div>
+              <div class="command-name">/remove-confession</div>
+              <div class="command-description">Remove an anonymous confession.</div>
+              <div class="command-usage">Usage: <code>/remove confession [number]</code></div>
+            </div>
+              <div class="command-card">
+              <div class="command-name">/confession-stats</div>
+              <div class="command-description">Show statistics about the confession system in the server.</div>
+              <div class="command-usage">Usage: <code>/confession-stats</code></div>
+            </div>
+              <div class="command-card">
+              <div class="command-name">/confession-leaderboard</div>
+              <div class="command-description">Show the global leaderboard for confessions and replies across all servers.</div>
+              <div class="command-usage">Usage: <code>/confession-leaderboard</code></div>
+            </div>
+                          <div class="command-card">
+              <div class="command-name">/confession-config</div>
+              <div class="command-description">Configure the confession system for the server.</div>
+              <div class="command-usage">Usage: <code>/confession-config</code></div>
+            </div>
+              <div class="command-card">
+              <div class="command-name">/confession-info</div>
+              <div class="command-description">View details of a specific confession.</div>
+              <div class="command-usage">Usage: <code>/confession-info [number]</code></div>
             </div>
           </div>
         </div>
@@ -201,14 +251,29 @@
           <h3 class="category-title">User & Server Info</h3>
           <div class="commands-grid">
             <div class="command-card">
-              <div class="command-name">/userinfo</div>
-              <div class="command-description">Get detailed info about a user.</div>
-              <div class="command-usage">Usage: <code>/userinfo @user</code></div>
+              <div class="command-name">/avatar</div>
+              <div class="command-description">Displays a user's avatar.</div>
+              <div class="command-usage">Usage: <code>/avatar @user</code></div>
             </div>
             <div class="command-card">
-              <div class="command-name">/serverstats</div>
-              <div class="command-description">View real-time server statistics.</div>
-              <div class="command-usage">Usage: <code>/serverstats</code></div>
+              <div class="command-name">/user-info</div>
+              <div class="command-description">Displays detailed information about a user.</div>
+              <div class="command-usage">Usage: <code>/user-info @user</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/server-info</div>
+              <div class="command-description">Displays detailed information about the Discord server.</div>
+              <div class="command-usage">Usage: <code>/server-info</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/role-info</div>
+              <div class="command-description">Displays detailed information about a specific role.</div>
+              <div class="command-usage">Usage: <code>/role-info [role]</code></div>
+            </div>
+            <div class="command-card">
+              <div class="command-name">/joined</div>
+              <div class="command-description">Displays when a user joined Discord and the server</div>
+              <div class="command-usage">Usage: <code>/joined @user</code></div>
             </div>
           </div>
         </div>
