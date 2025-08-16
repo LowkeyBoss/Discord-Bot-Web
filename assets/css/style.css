@@ -560,7 +560,9 @@ header .container {
  * #TOP SELLER 
 \*-----------------------------------*/
 
-.top-seller { padding: 60px 0; }
+.top-seller { 
+  padding: 60px 0; 
+}
 
 .top-seller-title {
   display: flex;
@@ -570,9 +572,13 @@ header .container {
   gap: 5px;
 }
 
-.top-seller-title span { color: var(--golden-puppy); }
+.top-seller-title span { 
+  color: var(--golden-puppy); 
+}
 
-.top-seller-title ion-icon { margin-left: 10px; }
+.top-seller-title ion-icon { 
+  margin-left: 10px; 
+}
 
 .top-seller-list {
   display: grid;
@@ -595,6 +601,15 @@ header .container {
   gap: 20px;
   border: 1px solid var(--onyx-2);
   border-radius: 4px;
+
+  /* Hover transition for smooth effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.top-seller-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .top-seller-card::before,
@@ -618,7 +633,9 @@ header .container {
 }
 
 .top-seller-card:hover::before,
-.top-seller-card:hover::after { background: var(--golden-puppy); }
+.top-seller-card:hover::after { 
+  background: var(--golden-puppy); 
+}
 
 .top-seller .card-number {
   position: absolute;
@@ -637,6 +654,13 @@ header .container {
   position: relative;
   background: var(--black);
   border-radius: 50%;
+
+  /* Optional smooth image zoom on hover */
+  transition: transform 0.3s ease;
+}
+
+.top-seller-card:hover .card-avatar {
+  transform: scale(1.1);
 }
 
 .avatar-badge {
@@ -653,22 +677,23 @@ header .container {
   align-items: center;
 }
 
-.avatar-badge ion-icon { --ionicon-stroke-width: 70px; }
+.avatar-badge ion-icon { 
+  --ionicon-stroke-width: 70px; 
+}
 
 .top-seller .card-title {
   color: var(--quick-silver);
   transition: var(--transition);
 }
 
-.top-seller-card:hover .card-title { color: var(--golden-puppy); }
+.top-seller-card:hover .card-title { 
+  color: var(--golden-puppy); 
+}
 
 .top-seller .card-content data {
   color: var(--quick-silver);
   font-size: var(--fs-10);
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -1258,17 +1283,25 @@ header .container {
 
 
 
-  /**
-   * ABOUT
-   */
+  /* ABOUT CARDS */
+.about-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--eerie-black-2); /* default grey background */
+  border-radius: 8px; /* optional rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
 
-  .about-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background-color: var(--onyx-2); /* slightly lighter/darker grey on hover */
+}
+
 
 
 
@@ -1278,4 +1311,169 @@ header .container {
 
   .footer-list { min-width: 180px; }
 
+}
+
+/* HERO BOT PFP HOVER EFFECT */
+.hero-banner img {
+  border-radius: 50%; /* make it circular if needed */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.hero-banner img:hover {
+  transform: scale(1.12) rotate(-5deg); /* subtle zoom + tilt */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35); /* soft shadow glow */
+}
+.btn-primary:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.about-card h3, 
+.top-seller-card .card-title {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.about-card:hover h3::after,
+.top-seller-card:hover .card-title::after {
+  left: 0;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #00fff0, #ff00ff, #00fff0);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Sonic Gradient EFFECT */
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------- */
+/* Skills hover effect */
+/* ------------------- */
+.skill {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.skill:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.6);
+  background: rgba(56, 189, 248, 0.25);
+}
+
+/* ------------------------ */
+/* Social buttons hover effect */
+/* ------------------------ */
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  color: #00fff0; /* neon cyan color on hover */
+  text-shadow: 0 0 8px #00fff0, 0 0 15px #00fff0, 0 0 25px #00fff0;
+}
+
+/* Optional: pulse effect for hover */
+.social-link:hover {
+  animation: pulseGlow 1.2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 8px #00fff0, 0 0 15px #00fff0, 0 0 25px #00fff0;
+  }
+  100% {
+    text-shadow: 0 0 12px #00fff0, 0 0 20px #00fff0, 0 0 35px #00fff0;
+  }
+}
+
+
+.avatar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #38bdf8, 0 0 35px #38bdf8, 0 0 50px #0ff;
+}
+
+.fun-facts li {
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.fun-facts li:hover {
+  transform: translateX(5px);
+  background: rgba(0, 255, 240, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 255, 240, 0.3);
+}
+
+/* Name hover effect */
+.profile-info h1 {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Banner hover effect */
+.profile-header .banner {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.profile-header .banner:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #38bdf8, 0 0 35px #0ff, 0 0 50px #00fff0;
+}
+
+/* Social icon hover with platform colors */
+.social-buttons .social-link {
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Example for Discord, Twitter, Instagram, YouTube */
+.social-buttons .social-link:hover {
+  transform: scale(1.2);
+}
+
+/* Individual colors */
+.social-buttons .social-link[href*="discord"]:hover {
+  color: #5865F2; /* Discord blurple */
+  text-shadow: 0 0 8px #5865F2, 0 0 15px #5865F2;
+}
+
+.social-buttons .social-link[href*="twitter"]:hover {
+  color: #1DA1F2; /* Twitter blue */
+  text-shadow: 0 0 8px #1DA1F2, 0 0 15px #1DA1F2;
+}
+
+.social-buttons .social-link[href*="instagram"]:hover {
+  color: #E1306C; /* Instagram pink */
+  text-shadow: 0 0 8px #E1306C, 0 0 15px #E1306C;
+}
+
+.social-buttons .social-link[href*="youtube"]:hover {
+  color: #FF0000; /* YouTube red */
+  text-shadow: 0 0 8px #FF0000, 0 0 15px #FF0000;
 }
